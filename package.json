@@ -1,0 +1,23 @@
+{
+  "name": "pw-api-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-on-chrome": "npx playwright test create-api-request.spec.js --project=chromium",
+    "test-on-firefox": "npx playwright test create-api-request.spec.js --project=firefox",
+    "test-on-webkit": "npx playwright test create-api-request.spec.js --project=webkit",
+    "test-parallel-headless-on-chrome": "npx playwright test create-api-request.spec.js --project=chromium & npx playwright test api-on-conduit.spec.js --project=chromium",
+    "test-parallel-headed-on-chrome": "npx playwright test create-api-request.spec.js --project=chromium --headed & npx playwright test api-on-conduit.spec.js --project=chromium --headed",
+    "test-sequential-headless-on-chrome": "npx playwright test create-api-request.spec.js --project=chromium && npx playwright test api-on-conduit.spec.js --project=chromium",
+    "test-sequential-headed-on-chrome": "npx playwright test create-api-request.spec.js --project=chromium --headed && npx playwright test api-on-conduit.spec.js --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.1",
+    "dotenv": "^16.4.5"
+  }
+}
